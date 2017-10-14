@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         },
     },
 
-    	mochaTest: {
+  /*  	mochaTest: {
       		'server-side': {
         		  options: {
           			 reporter: 'XUnit',
@@ -69,7 +69,7 @@ module.exports = function (grunt) {
               },
               src: ['tests/fvt/*.js']
           }
-    	},
+    	}, */
 
     	clean: {
     		options: {
