@@ -16,7 +16,7 @@ var app = express();
 app.use(express.static('static'));
 app.set('view engine', 'ejs');
 
-app.use( bodyParser.json() ); 
+app.use( bodyParser.json() );
 app.use(bodyParser.urlencoded({
   extended: false
 }));
@@ -29,5 +29,5 @@ server.listen(port, function () {
 });
 
 app.get("/", function(req, res) {
-    return res.render('main');
+    return res.render('index');
 });

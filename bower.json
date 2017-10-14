@@ -1,7 +1,8 @@
 {
   "name": "WeatherReport",
   "version": "0.1.0",
-  "main": "app.js",
+  "license": "MIT",
+  "main": "bower_components/index.html",
   "moduleType": [
     "node"
   ],
