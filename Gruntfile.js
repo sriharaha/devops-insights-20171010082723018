@@ -206,7 +206,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-available-tasks');
     grunt.loadNpmTasks('grunt-bower-installer');
-    grunt.loadNpmTasks('grunt-mocha-test');
+    //grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -218,9 +218,9 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['availabletasks']);
     grunt.registerTask('dev-lint', ['jshint:browser', 'jshint:server']);
     grunt.registerTask('dev-setup', ['clean:all', 'bower', 'sass:dist', 'jshint:browser']);
-		grunt.registerTask('fvt-test', ['mochaTest:fvt']);
+		//grunt.registerTask('fvt-test', ['mochaTest:fvt']);
     grunt.registerTask('dev-test', ['clean:coverage', 'copy:resourcesForInstrumented', 'instrument']);
     grunt.registerTask('dev-test-cov', ['clean:coverage', 'copy:resourcesForInstrumented', 'instrument', 'storeCoverage', 'makeReport-lcov', 'makeReport']);
-    grunt.registerTask('dev-uitest', ['mochaTest:fvt']);
+//    grunt.registerTask('dev-uitest', ['mochaTest:fvt']);
 
 };
