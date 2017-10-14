@@ -31,3 +31,18 @@ server.listen(port, function () {
 app.get("/", function(req, res) {
     return res.render('index');
 });
+
+app.get("/report", function(req, res){
+   //Fetech from database
+   var reportData = {
+     report: [{
+       name: "vamsi",
+       number:10
+      },{
+        name: "harsha",
+        number: 20
+      }]
+   } ;
+
+    return res.render("report", reportData);
+})

@@ -1,0 +1,21 @@
+
+
+<html>
+<head>
+  <title>SMS web reporting</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" type="text/css" href="test.css">
+
+</head>
+<body>
+  <table>
+       <% for(var i=0; i < report.length; i++) { %>
+     <tr>
+       <td><%= report[i].name %></td>
+       <td><%= report[i].number %></td>
+     </tr>
+  <% } %>
+  </table>
+
+</body>
