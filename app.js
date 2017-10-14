@@ -34,6 +34,26 @@ app.get("/", function(req, res) {
 
 app.get("/report", function(req, res){
    //Fetech from database
+
+
+/*   var connection = mysql.createConnection({
+    host     : 'us-cdbr-sl-dfw-01.cleardb.net',
+    user     : 'b2b5ec2b876702',
+    password : '6bc1ee11 ',
+    database : 'my_db'
+  });
+
+connection.connect();
+
+connection.query('SELECT * from sms7550_01', function (error, results, fields) {
+      console.log(JSON.stringify(results));
+      if (error) throw error;
+        console.log('The solution is: ', results[0].solution);
+      });
+
+      connection.end(); */
+
+
    var reportData = {
      report: [{
        name: "vamsi",
@@ -44,5 +64,5 @@ app.get("/report", function(req, res){
       }]
    } ;
 
-    return res.render("report", reportData);
+    return res.render("report", reportData);    
 })

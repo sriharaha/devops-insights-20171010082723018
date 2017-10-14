@@ -1,5 +1,3 @@
-
-
 <html>
 <head>
   <title>SMS web reporting</title>
@@ -9,7 +7,53 @@
 
 </head>
 <body>
-  <table>
+<div class="navbar">
+
+  <div class="dropdown">
+    <button class="dropbtn">Opportunities
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">LIO/Manager View</a>
+    </div>
+	</div>
+
+		<div class="dropdown">
+	<button class="dropbtn">Weekly key deals
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Manager View</a>
+      <a href="#">Node View</a>
+
+    </div>
+
+  </div>
+  	<div class="dropdown">
+	<button class="dropbtn">Sales Action Quadrant
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">By Client</a>
+      <a href="#">By Brand</a>
+
+    </div>
+
+  </div>
+  <div class="dropdown">
+	<button class="dropbtn">Daily Roadmap Action
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">By deal size</a>
+      <a href="#">By Brand</a>
+	  <a href="#">By opportunity</a>
+
+    </div>
+
+  </div>
+</div>
+  <table border="2px">
        <% for(var i=0; i < report.length; i++) { %>
      <tr>
        <td><%= report[i].name %></td>
@@ -19,3 +63,4 @@
   </table>
 
 </body>
+</html>
