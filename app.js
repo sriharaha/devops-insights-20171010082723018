@@ -34,35 +34,26 @@ app.get("/", function(req, res) {
 
 app.get("/report", function(req, res){
    //Fetech from database
+   var mysql = require('mysql');
 
+ var con = mysql.createConnection({
+   host: "us-cdbr-sl-dfw-01.cleardb.net",
+   user: "b6dc2d4d29ec61",
+   password: "cc038d80",
+   database: "ibmx_97718cb7c308637"
+ });
+ var json =[];
 
-/*   var connection = mysql.createConnection({
-    host     : 'us-cdbr-sl-dfw-01.cleardb.net',
-    user     : 'b2b5ec2b876702',
-    password : '6bc1ee11 ',
-    database : 'my_db'
-  });
+ con.connect(function(err) {
+   if (err) throw err;
+   con.query("select * from `ibmx_97718cb7c308637`.`is`", function (err, result, fields) {
+     if (err) throw err;
+     //console.log(result);
+ 	var jsonsting = JSON.stringify(result);
+      json = JSON.parse(jsonsting);
+return res.render("report", {report : json});
+   });
+ });
 
-connection.connect();
-
-connection.query('SELECT * from sms7550_01', function (error, results, fields) {
-      console.log(JSON.stringify(results));
-      if (error) throw error;
-        console.log('The solution is: ', results[0].solution);
-      });
-
-      connection.end(); */
-
-
-   var reportData = {
-     report: [{
-       name: "vamsi",
-       number:10
-      },{
-        name: "harsha",
-        number: 20
-      }]
-   } ;
-
-    return res.render("report", reportData);    
+  
 })
