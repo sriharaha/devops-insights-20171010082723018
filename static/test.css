@@ -116,8 +116,9 @@ a {
 /* header line */
 .navbar {
     overflow: hidden;
-    background-color:silver;
+    background-color:#F0F0F0 !important;
     font-family: Arial;
+
 }
 
 .navbar a {
@@ -125,7 +126,7 @@ a {
     font-size: 16px;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 5px 300px 10px 3px;
     text-decoration: none;
 }
 
@@ -135,11 +136,11 @@ a {
 }
 
 .dropdown .dropbtn {
-    font-size: 16px;    
+    font-size: 16px;
     border: none;
     outline: none;
     color: black;
-    padding: 14px 16px;
+    padding: 5px 16px;
     background-color: inherit;
 }
 
