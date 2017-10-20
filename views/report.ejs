@@ -4,9 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel = "stylesheet" type="text/css" href="test.css">
+  <link rel="icon" type="image/png" href="images/p-logo.png" height="10" width="10"/>
 
 </head>
 <body>
+<style>
+div.container {
+  display:inline-block;
+  p {
+      padding: 50px 30px 50px 80px;
+    }
+}
+</style>
+<div class="container"> <img class="Logo" src="images/IBM_logo.svg" height="50" width="50"> </div>
+<div class="container"> <img class="SMS" src="images/SMS-SR-small.jpg" height="50" width="50"> </div>
 <div class="navbar">
 
   <div class="dropdown">
@@ -53,12 +64,40 @@
 
   </div>
 </div>
-  <table border="2px">
-    <tr><th>Opp No</th><th>Opp Name</th></tr>
+  <table>
+  <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  padding: 15px;
+}
+
+table, td {
+  border: 1px solid black;
+  height: 50px;
+  text-align: left;
+
+}
+th {
+  border: 1px solid black;
+  height: 50px;
+  text-align: center;
+  background-color:Lightblue;
+  color: black;
+  }
+</style>
+    <tr><th>Opp No</th><th>Opp Name</th><th>Geo</th><th>Market</th><th>Opp Create Date</th><th>Detail Update Date</th><th>S/S Name</th><th>Elapsed Days in S/S</th><th>Opp Age</th></tr>
        <% for(var i=0; i < report.length; i++) { %>
      <tr>
        <td><%= report[i]['Opp No'] %></td>
        <td><%= report[i]['Opp Name'] %></td>
+       <td><%= report[i]['Geo'] %></td>
+       <td><%= report[i]['Market'] %></td>
+       <td><%= report[i]['Opp Create Date'] %></td>
+       <td><%= report[i]['Detail Update Date'] %></td>
+       <td><%= report[i]['S/S Name'] %></td>
+       <td><%= report[i]['Elapsed Days in S/S'] %></td>
+       <td><%= report[i]['Opp Age'] %></td>
          </tr>
   <% } %>
   </table>
